@@ -1,0 +1,8 @@
+services:
+  server:
+    image: php81-apache-xdebug
+    build: .
+    volumes:
+      - ./htdocs:/var/www/html
+    ports:
+      - 8080:80
