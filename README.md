@@ -2,9 +2,9 @@
 Minimal initial setup for debugging with Xdebug and VSCode inside Apache Webserver container
 
 ## Running
-Just run `docker compose up` (or `podman-compose up`) to start developing. You can use provided launch.json to debug.
-You probably want to use rootless docker or preferably
-podman to develop, as it won't create uid conflicts.
+Just run `./start.sh` to start developing. You can use provided launch.json to debug.
+Provided script sets UID and GID of `www-data` user inside container to the same as user running the script, so you shouldn't have any problems
+regarding permissions of files.
 
 ## Running in different networks / on different platform (eg. Docker Desktop for Windows)
 You might need to change address ip at the end of dockerfile corresponding to address on which your XDebug client
