@@ -2,7 +2,7 @@
 Minimal initial setup for debugging with Xdebug and VSCode inside Apache Webserver container
 
 ## Running
-Just run `./start.sh` to start developing. You can use provided launch.json to debug.
+Just run `./sync_user_inside_container.sh` to make sure current user has rights to htdocs. You can use provided launch.json to debug.
 Provided script sets UID and GID of `www-data` user inside container to the same as user running the script, so you shouldn't have any problems
 regarding permissions of files.
 
